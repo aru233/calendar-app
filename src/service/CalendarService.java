@@ -72,7 +72,6 @@ public class CalendarService {
         return -1;
     }
 
-    //TODO: implement overlapping interval
     public List<Integer> getConflictinEvents(User user) {
 
         int[] hourlyTimeMap = new int[25];

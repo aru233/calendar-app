@@ -30,6 +30,9 @@ Bonus:
 Possible improvements
 - startTime/ endTime -> Date type instead of int / Long to store the epoch seconds
 
+- There can be an event manager who has all the events across all the Users... sorted by start time ...
+Can be stored in DB, or if in-memeory -> use a TreeSet<Event> or something similar
+
 
 Recurring events - One way is to store each recurring event as a separate record in the database; simple but can be inefficient if lot of recurring events.
 
@@ -43,6 +46,9 @@ recurringFrequency
 - every 1st sunday of month
 every 10th day of month
 
+
+- Each event of the recurring event can be treated as a separate event - each with their own id, recFreq, recEndTime etc
+    - modifying some events of the recurring series easier, as each event is separately handled.
 We must support an infinite number of events with finite resources; behavior of our sytem-
 - Recurring events are very similar to each other. Their only varying property is their date of occurrence.
 - These events have a predictable difference in their date of occurrence. 
